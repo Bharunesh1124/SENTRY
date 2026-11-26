@@ -35,7 +35,7 @@ agentsentry scan ./examples --fail-on critical
 | `AS-004` | `MEDIUM` | **Unguarded Filesystem Write**: File write/delete without path-containment checks (`is_relative_to` / `commonpath`) |
 | `AS-005` | `MEDIUM` | **Unconstrained Network Egress**: Network POST/PUT/SEND to an LLM-controlled destination |
 
-## False-Positive Reduction
+## False-Positive Reduction-getme
 
 AgentSentry suppresses noise by checking:
 - **Hardcoded literals**: e.g., `requests.post("https://hooks.slack.com/...")` is marked `HARDCODED` rather than arbitrary egress.
