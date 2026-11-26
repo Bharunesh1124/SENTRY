@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agentsentry"
+version = "0.1.0"
+description = "Static capability and taint reachability analyzer for AI agents and MCP servers."
+requires-python = ">=3.12"
+dependencies = [
+    "typer>=0.12.0",
+    "rich>=13.7.0",
+    "networkx>=3.2",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+agentsentry = "agentsentry.cli:app"
+
+[tool.setuptools.packages.find]
+where = ["src"]
